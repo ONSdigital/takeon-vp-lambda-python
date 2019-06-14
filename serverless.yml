@@ -22,5 +22,5 @@ package:
   - test/**
 
 functions:
-  hello:
+  run:
     handler: handler.run_validation_rule

@@ -12,9 +12,8 @@ class Runner:
             self.loaded_data = self.input_data
 
     def run_rule(self):
-        for question in self.loaded_data["input"]:
-            if question["response"] != "":
-                question["triggered"] = True
-            else:
-                question["triggered"] = False
+        if self.loaded_data["input"]["response"] != "":
+            self.loaded_data["input"]["triggered"] = True
+        else:
+            self.loaded_data["input"]["triggered"] = False
         return self.loaded_data
